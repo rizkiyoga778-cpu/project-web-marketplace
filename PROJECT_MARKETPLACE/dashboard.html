@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - UMKMMart Yoga Rifki Pratama</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Dashboard Header -->
+    <header class="dashboard-header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-apple-alt"></i> UMKMMart YogaRifki Admin</h1>
+            </div>
+            <nav class="dashboard-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="login.html" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <section class="dashboard-content">
+        <div class="container">
+            <div class="welcome-message">
+                <h2><i class="fas fa-chart-line"></i> Dashboard Admin</h2>
+                <p>Selamat datang, Admin! Kelola toko buah UMKMMart Anda dari sini.</p>
+            </div>
+            
+            <!-- Stats Overview -->
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>Total Produk</h3>
+                    <p id="totalProducts">15</p>
+                    <p>Jenis buah yang tersedia</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Total Pesanan</h3>
+                    <p id="totalOrders">48</p>
+                    <p>Pesanan bulan ini</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Pelanggan</h3>
+                    <p id="totalCustomers">32</p>
+                    <p>Pelanggan aktif</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Pendapatan</h3>
+                    <p id="totalRevenue">Rp 5.240.000</p>
+                    <p>Bulan ini</p>
+                </div>
+            </div>
+            
+            <!-- Products Management -->
+            <div class="dashboard-table">
+                <h3><i class="fas fa-boxes"></i> Kelola Produk Buah</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Buah</th>
+                                <th>Kategori</th>
+                                <th>Harga/kg</th>
+                                <th>Stok (kg)</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTable">
+                            <!-- Data akan diisi oleh JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <button id="addProductBtn" class="add-product-btn"><i class="fas fa-plus"></i> Tambah Produk Baru</button>
+            </div>
+            
+            <!-- Recent Orders -->
+            <div class="dashboard-table" style="margin-top: 40px;">
+                <h3><i class="fas fa-shopping-cart"></i> Pesanan Terbaru</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No Pesanan</th>
+                                <th>Pelanggan</th>
+                                <th>Produk</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ordersTable">
+                            <!-- Data akan diisi oleh JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-apple-alt"></i> UMKMMart_YRP</h3>
+                    <p>Platform E-Commerce khusus untuk buah segar langsung dari petani lokal.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak Kami</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Kebon No. 10, Bandar Lampung</p>
+                    <p><i class="fas fa-phone"></i> (+62) 812-3456-7890</p>
+                    <p><i class="fas fa-envelope"></i> buah@umkmmart-yrp.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="produk.html">Produk</a></li>
+                        <li><a href="login.html">Login Admin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Jam Operasional</h4>
+                    <p>Senin - Minggu: 06.00 - 21.00</p>
+                    <p>Pengiriman: 07.00 - 19.00</p>
+                    <p>Buka Hari Libur</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 UMKMMart Yoga Rifki Pratama - Toko Buah Segar. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Dashboard functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sample products data
+            const products = [
+                { id: 1, name: "Apel Merah Washington", category: "Impor", price: 35000, stock: 50 },
+                { id: 2, name: "Pisang Cavendish", category: "Lokal", price: 25000, stock: 120 },
+                { id: 3, name: "Mangga Harum Manis", category: "Musiman", price: 40000, stock: 35 },
+                { id: 4, name: "Jeruk Medan Manis", category: "Lokal", price: 28000, stock: 80 },
+                { id: 5, name: "Anggur Red Globe", category: "Impor", price: 75000, stock: 25 },
+                { id: 6, name: "Semangka Merah", category: "Tropis", price: 15000, stock: 60 },
+                { id: 7, name: "Melon Golden", category: "Tropis", price: 22000, stock: 45 },
+                { id: 8, name: "Stroberi California", category: "Impor", price: 65000, stock: 15 },
+                { id: 9, name: "Kiwi Zespri Gold", category: "Impor", price: 85000, stock: 20 },
+                { id: 10, name: "Pepaya California", category: "Tropis", price: 18000, stock: 70 }
+            ];
+            
+            // Sample orders data
+            const orders = [
+                { id: "ORD001", customer: "Yoga Rifki Pratama", products: "Apel (2kg), Jeruk (3kg)", total: 154000, status: "Selesai" },
+                { id: "ORD002", customer: "Tarikat", products: "Mangga (5kg)", total: 200000, status: "Diproses" },
+                { id: "ORD003", customer: "Muhammad Arkaan", products: "Pisang (4kg), Melon (2kg)", total: 144000, status: "Dikirim" },
+                { id: "ORD004", customer: "Muhammad Figo", products: "Anggur (1kg), Kiwi (2kg)", total: 235000, status: "Selesai" },
+                { id: "ORD005", customer: "Faisal Hanif", products: "Semangka (10kg)", total: 150000, status: "Menunggu" }
+            ];
+            
+            // Populate products table
+            const productsTable = document.getElementById('productsTable');
+            products.forEach(product => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${product.id}</td>
+                    <td>${product.name}</td>
+                    <td><span class="category-badge">${product.category}</span></td>
+                    <td>Rp ${product.price.toLocaleString()}</td>
+                    <td>${product.stock} kg</td>
+                    <td>
+                        <button class="action-btn edit-btn" data-id="${product.id}">Edit</button>
+                        <button class="action-btn delete-btn" data-id="${product.id}" style="background-color: var(--danger-color); margin-left: 5px;">Hapus</button>
+                    </td>
+                `;
+                productsTable.appendChild(row);
+            });
+            
+            // Populate orders table
+            const ordersTable = document.getElementById('ordersTable');
+            orders.forEach(order => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${order.id}</td>
+                    <td>${order.customer}</td>
+                    <td>${order.products}</td>
+                    <td>Rp ${order.total.toLocaleString()}</td>
+                    <td><span class="status-badge status-${order.status.toLowerCase()}">${order.status}</span></td>
+                    <td>
+                        <button class="action-btn view-btn" data-id="${order.id}">Detail</button>
+                    </td>
+                `;
+                ordersTable.appendChild(row);
+            });
+            
+            // Add product button
+            document.getElementById('addProductBtn').addEventListener('click', function() {
+                const name = prompt('Masukkan nama buah:');
+                if (name) {
+                    const category = prompt('Masukkan kategori (Lokal/Impor/Musiman/Tropis):');
+                    const price = prompt('Masukkan harga per kg (contoh: 35000):');
+                    const stock = prompt('Masukkan stok awal (kg):');
+                    
+                    if (category && price && stock) {
+                        const newId = products.length + 1;
+                        
+                        // Add to array
+                        products.push({
+                            id: newId,
+                            name: name,
+                            category: category,
+                            price: parseInt(price),
+                            stock: parseInt(stock)
+                        });
+                        
+                        // Add to table
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${newId}</td>
+                            <td>${name}</td>
+                            <td><span class="category-badge">${category}</span></td>
+                            <td>Rp ${parseInt(price).toLocaleString()}</td>
+                            <td>${stock} kg</td>
+                            <td>
+                                <button class="action-btn edit-btn" data-id="${newId}">Edit</button>
+                                <button class="action-btn delete-btn" data-id="${newId}" style="background-color: var(--danger-color); margin-left: 5px;">Hapus</button>
+                            </td>
+                        `;
+                        productsTable.appendChild(row);
+                        
+                        // Update stats
+                        document.getElementById('totalProducts').textContent = products.length;
+                        alert(`Produk "${name}" berhasil ditambahkan!`);
+                    }
+                }
+            });
+            
+            // Edit and delete buttons event delegation
+            productsTable.addEventListener('click', function(e) {
+                if (e.target.classList.contains('delete-btn')) {
+                    const productId = parseInt(e.target.getAttribute('data-id'));
+                    if (confirm('Apakah Anda yakin ingin menghapus produk ini?')) {
+                        // Remove from array
+                        const index = products.findIndex(p => p.id === productId);
+                        if (index !== -1) {
+                            products.splice(index, 1);
+                        }
+                        
+                        // Remove from table
+                        const row = e.target.closest('tr');
+                        row.remove();
+                        
+                        // Update stats
+                        document.getElementById('totalProducts').textContent = products.length;
+                        alert('Produk berhasil dihapus!');
+                    }
+                }
+                
+                if (e.target.classList.contains('edit-btn')) {
+                    const productId = parseInt(e.target.getAttribute('data-id'));
+                    const product = products.find(p => p.id === productId);
+                    
+                    if (product) {
+                        const newStock = prompt(`Edit stok untuk ${product.name} (saat ini: ${product.stock} kg):`, product.stock);
+                        if (newStock !== null) {
+                            product.stock = parseInt(newStock);
+                            
+                            // Update table
+                            const row = e.target.closest('tr');
+                            row.cells[4].textContent = `${newStock} kg`;
+                            
+                            alert(`Stok ${product.name} berhasil diperbarui menjadi ${newStock} kg!`);
+                        }
+                    }
+                }
+            });
+            
+            // Logout button
+            document.getElementById('logoutBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                if (confirm('Apakah Anda yakin ingin logout?')) {
+                    window.location.href = 'login.html';
+                }
+            });
+            
+            // Add CSS for badges
+            const style = document.createElement('style');
+            style.textContent = `
+                .category-badge {
+                    display: inline-block;
+                    padding: 3px 10px;
+                    border-radius: 12px;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                }
+                .category-badge {
+                    background-color: #e8f5e9;
+                    color: var(--primary-color);
+                }
+                .status-badge {
+                    display: inline-block;
+                    padding: 5px 12px;
+                    border-radius: 15px;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                }
+                .status-selesai {
+                    background-color: #e8f5e9;
+                    color: var(--success-color);
+                }
+                .status-diproses {
+                    background-color: #fff3e0;
+                    color: var(--warning-color);
+                }
+                .status-dikirim {
+                    background-color: #e3f2fd;
+                    color: var(--primary-color);
+                }
+                .status-menunggu {
+                    background-color: #f5f5f5;
+                    color: var(--gray-color);
+                }
+                .welcome-message {
+                    background-color: white;
+                    padding: 30px;
+                    border-radius: 10px;
+                    margin-bottom: 30px;
+                    box-shadow: var(--shadow);
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>

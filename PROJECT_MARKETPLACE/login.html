@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin - UMKMMart Yoga Rifki Pratama</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for login page */
+        body {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .login-main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        
+        .login-container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 450px;
+        }
+        
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .login-header h2 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+        
+        .login-header p {
+            color: var(--gray-color);
+            font-size: 0.95rem;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 10px;
+        }
+        
+        .login-btn:hover {
+            background-color: var(--dark-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+        }
+        
+        .form-footer {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--gray-color);
+        }
+        
+        .form-footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .demo-credentials {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .demo-credentials h4 {
+            margin-bottom: 10px;
+            color: var(--dark-color);
+            font-size: 0.95rem;
+        }
+        
+        .demo-credentials p {
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+        }
+        
+        .login-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .login-logo i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            background-color: rgba(39, 174, 96, 0.1);
+            padding: 20px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        
+        .login-logo h1 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+        }
+        
+        .login-error {
+            color: var(--danger-color);
+            font-size: 0.9rem;
+            margin-top: 10px;
+            text-align: center;
+            display: none;
+            padding: 10px;
+            background-color: #ffe6e6;
+            border-radius: 5px;
+            border-left: 4px solid var(--danger-color);
+        }
+        
+        @media (max-width: 576px) {
+            .login-container {
+                padding: 30px 20px;
+            }
+            
+            .navbar .container {
+                padding: 0 15px;
+            }
+            
+            .login-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-apple-alt"></i> UMKMMart YogaRifki</h1>
+                <p>Buah Segar Langsung dari Petani</p>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="tentang.html"><i class="fas fa-info-circle"></i> Tentang Kami</a></li>
+                <li><a href="produk.html"><i class="fas fa-shopping-basket"></i> Produk</a></li>
+                <li><a href="login.html" class="btn-login active"><i class="fas fa-user-lock"></i> Login Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <main class="login-main">
+        <div class="container">
+            <div class="login-container">
+                <div class="login-logo">
+                    <i class="fas fa-user-lock"></i>
+                    <h1>Admin Panel</h1>
+                </div>
+                
+                <div class="login-header">
+                    <h2>Login Admin</h2>
+                    <p>Masuk ke dashboard administrasi UMKMMart Buah</p>
+                </div>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username"><i class="fas fa-user"></i> Username</label>
+                        <input type="text" id="username" name="username" class="form-control" 
+                               placeholder="Masukkan username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password"><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" id="password" name="password" class="form-control" 
+                               placeholder="Masukkan password" required>
+                    </div>
+                    
+                    <div class="login-error" id="loginError">
+                        Username atau password salah!
+                    </div>
+                    
+                    <button type="submit" class="login-btn">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                </form>
+                
+                <div class="demo-credentials">
+                    <h4>Kredensial Demo:</h4>
+                    <p><strong>Username:</strong> admin</p>
+                    <p><strong>Password:</strong> admin123</p>
+                </div>
+                
+                <div class="form-footer">
+                    <p>Kembali ke <a href="index.html">halaman utama</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-apple-alt"></i> UMKMMart_YRP</h3>
+                    <p>Platform E-Commerce khusus untuk buah segar langsung dari petani lokal.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak Kami</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Pertanian No. 45, Jakarta</p>
+                    <p><i class="fas fa-phone"></i> (021) 777-8899</p>
+                    <p><i class="fas fa-envelope"></i> buah@umkmmart-yrp.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="produk.html">Produk</a></li>
+                        <li><a href="login.html">Login Admin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Jam Operasional</h4>
+                    <p>Senin - Minggu: 06.00 - 21.00</p>
+                    <p>Pengiriman: 07.00 - 19.00</p>
+                    <p>Buka Hari Libur</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 UMKMMart Yoga Rifki Pratama - Toko Buah Segar. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                
+                // Animate hamburger to X
+                const bars = mobileMenu.querySelectorAll('.bar');
+                if (navMenu.classList.contains('active')) {
+                    bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    bars[1].style.opacity = '0';
+                    bars[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                } else {
+                    bars[0].style.transform = 'none';
+                    bars[1].style.opacity = '1';
+                    bars[2].style.transform = 'none';
+                }
+            });
+        }
+        
+        // Login form validation - SIMPLIFIED VERSION
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            const loginError = document.getElementById('loginError');
+            
+            if (loginForm) {
+                // Remove any existing event listeners
+                loginForm.onsubmit = null;
+                
+                // Add new event listener
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    console.log('Form submitted'); // Debug log
+                    
+                    const username = document.getElementById('username').value.trim();
+                    const password = document.getElementById('password').value.trim();
+                    
+                    console.log('Username:', username); // Debug log
+                    console.log('Password:', password); // Debug log
+                    
+                    // Hide previous error
+                    loginError.style.display = 'none';
+                    
+                    // For demo purposes - SIMPLE CHECK
+                    if (username === 'admin' && password === 'admin123') {
+                        console.log('Login successful'); // Debug log
+                        
+                        // Show success message
+                        const loginBtn = this.querySelector('.login-btn');
+                        const originalText = loginBtn.innerHTML;
+                        
+                        loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memproses...';
+                        loginBtn.disabled = true;
+                        
+                        // Simulate API call delay
+                        setTimeout(() => {
+                            alert('Login berhasil! Mengarahkan ke dashboard admin...');
+                            window.location.href = 'dashboard.html';
+                        }, 1000);
+                    } else {
+                        console.log('Login failed'); // Debug log
+                        // Show error
+                        loginError.style.display = 'block';
+                        loginError.textContent = 'Username atau password salah! Untuk demo gunakan: Username: admin, Password: admin123';
+                        
+                        // Focus on username field
+                        document.getElementById('username').focus();
+                    }
+                });
+                
+                // Auto-fill demo credentials for testing
+                window.addEventListener('load', function() {
+                    document.getElementById('username').value = 'admin';
+                    document.getElementById('password').value = 'admin123';
+                });
+            }
+            
+            // Set active link in navigation
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute('href');
+                if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Buah - UMKMMart Yoga Rifki Pratama</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-apple-alt"></i> UMKMMart YogaRifki</h1>
+                <p>Buah Segar Langsung dari Petani</p>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="tentang.html"><i class="fas fa-info-circle"></i> Tentang Kami</a></li>
+                <li><a href="produk.html" class="active"><i class="fas fa-shopping-basket"></i> Produk</a></li>
+                <li><a href="login.html" class="btn-login"><i class="fas fa-user-lock"></i> Login Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Products Hero -->
+    <section class="hero products-hero">
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Koleksi Buah Segar Kami</h1>
+                    <p>15 jenis buah pilihan dengan kualitas terbaik untuk kesehatan keluarga Anda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Filter -->
+    <section class="section">
+        <div class="container">
+            <div class="products-filter">
+                <h3>Filter Buah</h3>
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">Semua Buah</button>
+                    <button class="filter-btn" data-filter="lokal">Buah Lokal</button>
+                    <button class="filter-btn" data-filter="impor">Buah Impor</button>
+                    <button class="filter-btn" data-filter="musiman">Musiman</button>
+                    <button class="filter-btn" data-filter="tropis">Tropis</button>
+                </div>
+            </div>
+
+            <!-- All Products Grid -->
+            <div class="all-products-grid" id="productsContainer">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="impor">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Apel Merah">
+                        <span class="product-badge">Impor</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Apel Merah Washington</h3>
+                        <p>Apel merah premium dari Washington, renyah, manis alami, kaya serat dan antioksidan.</p>
+                        <div class="product-price">Rp 35.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="1">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="lokal">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pisang">
+                        <span class="product-badge">Lokal</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pisang Cavendish</h3>
+                        <p>Pisang cavendish segar dari kebun lokal, matang pohon, kaya potassium dan vitamin B6.</p>
+                        <div class="product-price">Rp 25.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="2">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="musiman lokal">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1553279768-865429fa0078?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mangga">
+                        <span class="product-badge">Musiman</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Mangga Harum Manis</h3>
+                        <p>Mangga manis legit dengan aroma harum khas, daging tebal tanpa serat, kaya vitamin C.</p>
+                        <div class="product-price">Rp 40.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="3">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="lokal">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1547514701-42782101795e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Jeruk">
+                        <span class="product-badge">Lokal</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jeruk Medan Manis</h3>
+                        <p>Jeruk medan manis segar, kaya vitamin C, memperkuat daya tahan tubuh, rendah kalori.</p>
+                        <div class="product-price">Rp 28.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="4">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="impor">
+                    <div class="product-image">
+                        <img src="https://rumahbuah.com/wp-content/uploads/2015/04/Rumbu_-Anggur04.jpg" alt="Anggur">
+                        <span class="product-badge">Impor</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Anggur Red Globe</h3>
+                        <p>Anggur merah impor Australia, manis dengan sedikit asam, kaya resveratrol untuk jantung.</p>
+                        <div class="product-price">Rp 75.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="5">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="tropis lokal">
+                    <div class="product-image">
+                        <img src="https://media.istockphoto.com/id/1142119394/id/foto/buah-semangka-utuh-dan-irisan-terisolasi-di-latar-belakang-putih.jpg?s=612x612&w=0&k=20&c=2U8trptuEcT9vVH_tccb5G9yK94GkuKiq05zoezWyEw=" alt="Semangka">
+                        <span class="product-badge">Tropis</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Semangka Merah</h3>
+                        <p>Semangka merah segar, manis alami, kandungan air tinggi, menyegarkan dan rendah kalori.</p>
+                        <div class="product-price">Rp 15.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="6">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-category="tropis lokal">
+                    <div class="product-image">
+                        <img src="https://yoline.co.id/media/products/ProductMelongolden_kg.png" alt="Melon">
+                        <span class="product-badge">Tropis</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Melon Golden</h3>
+                        <p>Melon golden manis, daging tebal, aroma harum, kaya vitamin A dan C untuk kesehatan mata.</p>
+                        <div class="product-price">Rp 22.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="7">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-category="impor">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Stroberi">
+                        <span class="product-badge">Impor</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Stroberi California</h3>
+                        <p>Stroberi merah segar dari California, manis dengan sedikit asam, kaya antioksidan.</p>
+                        <div class="product-price">Rp 65.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="8">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card" data-category="impor">
+                    <div class="product-image">
+                        <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/MTA-13934183/hypermart_kiwi_gold_zespri_pcs_full02_n0qg8oxx.jpeg" alt="Kiwi">
+                        <span class="product-badge">Impor</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Kiwi Zespri Gold</h3>
+                        <p>Kiwi gold premium dari Selandia Baru, manis tanpa asam, kandungan vitamin C sangat tinggi.</p>
+                        <div class="product-price">Rp 85.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="9">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card" data-category="tropis lokal">
+                    <div class="product-image">
+                        <img src="https://cdn.linkumkm.id/uploads/library/1/1/8/3/6/8/118368_840x576.jpg" alt="Pepaya">
+                        <span class="product-badge">Tropis</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pepaya California</h3>
+                        <p>Pepaya california manis, daging tebal merah, kaya enzim papain untuk pencernaan.</p>
+                        <div class="product-price">Rp 18.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="10">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card" data-category="tropis lokal">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nanas">
+                        <span class="product-badge">Tropis</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Nanas Madu Subang</h3>
+                        <p>Nanas subang manis seperti madu, segar, kaya bromelain untuk anti-inflamasi alami.</p>
+                        <div class="product-price">Rp 20.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="11">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card" data-category="lokal">
+                    <div class="product-image">
+                        <img src="https://drivethru.klikindomaret.com/tz0m/wp-content/uploads/sites/23/2021/04/Alpukat.jpg" alt="Alpukat">
+                        <span class="product-badge">Lokal</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Alpukat Mentega</h3>
+                        <p>Alpukat mentega lokal, daging tebal lembut, kaya lemak sehat dan serat untuk jantung.</p>
+                        <div class="product-price">Rp 45.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="12">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card" data-category="musiman lokal">
+                    <div class="product-image">
+                        <img src="https://haithuangroup.com/wp-content/uploads/Durian-Monthong.jpg" alt="Durian">
+                        <span class="product-badge">Musiman</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Durian Monthong</h3>
+                        <p>Durian monthong Thailand, daging tebal kuning, tekstur lembut, aroma khas yang kuat.</p>
+                        <div class="product-price">Rp 120.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="13">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="product-card" data-category="musiman lokal">
+                    <div class="product-image">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEi_M36T-j2x1-wVCJk0sYOSbk0p2R5CaFSw_s_vUblHwdf9t98vHrSuwxnm31SWLylOA9M8ZUyzYg3HNyyFlBe-hzqAFikj2_gFMQb3lwO0JCzr7OpgWXkdf6Hxk6rumI9Z9ndfeXmigbaMikbe38fq049PLOMxZuMW6Yb4BkPTyBLxPRyRr3urOEMzWA=w640-h474" alt="Rambutan">
+                        <span class="product-badge">Musiman</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rambutan Binjai</h3>
+                        <p>Rambutan binjai manis, daging tebal mudah lepas dari biji, kaya vitamin C dan zat besi.</p>
+                        <div class="product-price">Rp 30.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="14">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 15 -->
+                <div class="product-card" data-category="tropis lokal">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSgl1v1wckrWTcryxnFZw89liRoS2_Gtivg&s" alt="Salak">
+                        <span class="product-badge">Tropis</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Salak Pondoh Madu</h3>
+                        <p>Salak pondoh madu dari Sleman, manis legit, renyah, kaya serat dan mineral.</p>
+                        <div class="product-price">Rp 32.000/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <button class="btn-small add-to-cart" data-id="15">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary" id="cartSummary" style="display: none;">
+                <div class="cart-header">
+                    <h3><i class="fas fa-shopping-cart"></i> Ringkasan Keranjang</h3>
+                    <button id="clearCart" class="btn-small" style="background-color: var(--danger-color);">Kosongkan</button>
+                </div>
+                <div id="cartItems"></div>
+                <div class="cart-total">
+                    <h4>Total: <span id="cartTotal">Rp 0</span></h4>
+                    <button class="btn-primary" id="checkoutBtn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-apple-alt"></i> UMKMMart_YRP</h3>
+                    <p>Platform E-Commerce khusus untuk buah segar langsung dari petani lokal.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak Kami</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Pertanian No. 45, Jakarta</p>
+                    <p><i class="fas fa-phone"></i> (021) 777-8899</p>
+                    <p><i class="fas fa-envelope"></i> buah@umkmmart-yrp.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="produk.html">Produk</a></li>
+                        <li><a href="login.html">Login Admin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Jam Operasional</h4>
+                    <p>Senin - Minggu: 06.00 - 21.00</p>
+                    <p>Pengiriman: 07.00 - 19.00</p>
+                    <p>Buka Setiap Hari</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 UMKMMart Yoga Rifki Pratama - Toko Buah Segar. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Filter products
+                    productCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const categories = card.getAttribute('data-category').split(' ');
+                            if (categories.includes(filter)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Cart functionality
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartSummary = document.getElementById('cartSummary');
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            
+            // Update cart display
+            function updateCartDisplay() {
+                if (cart.length > 0) {
+                    cartSummary.style.display = 'block';
+                    cartItems.innerHTML = '';
+                    
+                    let total = 0;
+                    cart.forEach(item => {
+                        const itemTotal = item.price * item.quantity;
+                        total += itemTotal;
+                        
+                        const itemElement = document.createElement('div');
+                        itemElement.className = 'cart-item';
+                        itemElement.innerHTML = `
+                            <p>${item.name} x${item.quantity} = Rp ${itemTotal.toLocaleString()}</p>
+                        `;
+                        cartItems.appendChild(itemElement);
+                    });
+                    
+                    cartTotal.textContent = `Rp ${total.toLocaleString()}`;
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                } else {
+                    cartSummary.style.display = 'none';
+                    localStorage.setItem('cart', JSON.stringify([]));
+                }
+            }
+            
+            // Add to cart buttons
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-id');
+                    const productCard = this.closest('.product-card');
+                    const productName = productCard.querySelector('h3').textContent;
+                    const productPrice = parseInt(productCard.querySelector('.product-price').textContent.replace(/[^0-9]/g, ''));
+                    
+                    // Check if product already in cart
+                    const existingItem = cart.find(item => item.id === productId);
+                    
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                    } else {
+                        cart.push({
+                            id: productId,
+                            name: productName,
+                            price: productPrice,
+                            quantity: 1
+                        });
+                    }
+                    
+                    updateCartDisplay();
+                    alert(`${productName} telah ditambahkan ke keranjang!`);
+                });
+            });
+            
+            // Clear cart button
+            document.getElementById('clearCart').addEventListener('click', function() {
+                if (confirm('Apakah Anda yakin ingin mengosongkan keranjang?')) {
+                    cart = [];
+                    updateCartDisplay();
+                }
+            });
+            
+            // Checkout button
+            document.getElementById('checkoutBtn').addEventListener('click', function() {
+                if (cart.length > 0) {
+                    alert('Terima kasih! Pesanan Anda sedang diproses. Total: ' + cartTotal.textContent);
+                    cart = [];
+                    updateCartDisplay();
+                } else {
+                    alert('Keranjang belanja Anda kosong!');
+                }
+            });
+            
+            // Initial cart display
+            updateCartDisplay();
+            
+            // Add product rating styles
+            const style = document.createElement('style');
+            style.textContent = `
+                .product-rating {
+                    margin-bottom: 15px;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+                .product-rating i {
+                    color: var(--warning-color);
+                }
+                .product-rating span {
+                    color: var(--gray-color);
+                    font-size: 0.9rem;
+                }
+                .cart-summary {
+                    background-color: white;
+                    padding: 25px;
+                    border-radius: 10px;
+                    box-shadow: var(--shadow);
+                    margin-top: 40px;
+                }
+                .cart-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 20px;
+                }
+                .cart-item {
+                    padding: 10px 0;
+                    border-bottom: 1px solid #eee;
+                }
+                .cart-total {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 20px;
+                    padding-top: 20px;
+                    border-top: 2px solid var(--primary-color);
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
